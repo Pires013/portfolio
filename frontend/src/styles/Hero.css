@@ -1,0 +1,17 @@
+.hero {
+  padding: 130px 0 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero h1 {
+  color: var(--text);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 680px;
+  color: var(--text-light);
+  line-height: 1.75;
+}

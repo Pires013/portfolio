@@ -1,0 +1,120 @@
+.experience {
+  padding: 56px 0;
+}
+
+.experience h2 {
+  margin-bottom: 32px;
+}
+
+.experience__item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience__item:last-of-type {
+  border-bottom: none;
+}
+
+/* Logo + nome de um lado, data no lado oposto. */
+.experience__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.experience__company {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Ícone do Eldorado arredondado, ao lado do nome. */
+.experience__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.experience__company h3 {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 3px;
+  font-size: 0.97rem;
+}
+
+.experience__company p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+
+.experience__date {
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.experience__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.experience__icon {
+    font-size: 1.4rem;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    transition: transform .3s ease;
+}
+
+.experience__item {
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.experience__item:hover {
+    transform: translateY(-3px);
+}
+
+/* Container da descrição */
+.experience__about {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+        max-height .45s ease,
+        opacity .35s ease,
+        transform .35s ease;
+    padding-left: 20px;
+}
+
+/* Quando estiver aberto */
+.experience__about.open {
+    max-height: 600px; /* coloque um valor maior que o conteúdo */
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 15px;
+}
+
+.experience__about li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #555;
+}
+@media (max-width: 520px) {
+  .experience__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

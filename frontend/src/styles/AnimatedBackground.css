@@ -1,0 +1,54 @@
+.bg-fx {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 120% at 100% 0%, #eef2ff 0%, transparent 45%),
+    radial-gradient(120% 120% at 0% 100%, #e0e7ff 0%, transparent 45%),
+    var(--background);
+}
+
+.bg-fx__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+/* Brilho suave que pulsa lentamente atrás do conteúdo. */
+.bg-fx__glow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 760px;
+  max-height: 760px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(79, 70, 229, 0.16) 0%,
+    rgba(79, 70, 229, 0) 70%
+  );
+  filter: blur(20px);
+  animation: bg-pulse 9s ease-in-out infinite;
+}
+
+@keyframes bg-pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-fx__glow {
+    animation: none;
+  }
+}

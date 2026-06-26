@@ -1,0 +1,58 @@
+.sidebar{
+
+    position: fixed;
+
+    left:30px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+    flex-direction:column;
+
+    gap:25px;
+
+    align-items:center;
+
+}
+
+.sidebar a{
+
+    font-size:30px;
+
+    color:#444;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    color:#3B82F6;
+
+    transform:scale(1.2);
+
+}
+
+.sidebar__language{
+
+    margin-top:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.sidebar button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+}
