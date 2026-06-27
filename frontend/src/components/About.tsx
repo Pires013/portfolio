@@ -3,7 +3,7 @@ import "../styles/About.css";
 
 function About() {
 
-  const profile = useFetch("http://127.0.0.1:8000/profile");
+  const profile = useFetch(`${import.meta.env.VITE_API_URL}/profile`);
   console.log(profile);
 
   if (!profile) {

@@ -3,7 +3,7 @@ import "../styles/Education.css";
 
 function Education() {
 
-    const data = useFetch("http://127.0.0.1:8000/education");
+    const data = useFetch(`${import.meta.env.VITE_API_URL}/education`);
 
     if (!data) {
         return <p>Carregando...</p>;

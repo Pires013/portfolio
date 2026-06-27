@@ -8,7 +8,7 @@ import Eldorado from "../pages/image.png";
 function Experience() {
   const [selectedJob, setSelectedJob] = useState<number | null>(null);
 
-  const data = useFetch("http://127.0.0.1:8000/experience");
+  const data = useFetch(`${import.meta.env.VITE_API_URL}/experience`);
 
   if (!data) {
     return <p>Carregando...</p>;

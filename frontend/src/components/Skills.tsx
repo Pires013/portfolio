@@ -41,7 +41,7 @@ function SkillBadge({ skill }: { skill: any }) {
 }
 
 function Skills() {
-  const data = useFetch("http://127.0.0.1:8000/skills");
+  const data = useFetch(`${import.meta.env.VITE_API_URL}/skills`);
 
   if (!data) {
     return <p>Carregando...</p>;
